@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Nav() {
@@ -11,13 +10,11 @@ export default function Nav() {
     <>
       <nav className="nav">
         <Link href="/" className="nav-brand">
-          <Image
-            src="/logo.png"
-            alt="Cortex Olympiad Logo"
-            width={52}
-            height={52}
-            style={{ objectFit: "contain" }}
-            priority
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-icon.svg?v=2"
+            alt="Cortex Olympiad"
+            className="nav-logo"
           />
           <div className="nav-brand-text">
             <span className="nav-cortex">CORTEX OLYMPIAD</span>
@@ -70,6 +67,12 @@ export default function Nav() {
           align-items: center;
           gap: 12px;
           text-decoration: none;
+          flex-shrink: 0;
+        }
+        .nav-logo {
+          height: 60px;
+          width: auto;
+          display: block;
           flex-shrink: 0;
         }
         .nav-brand-text {
@@ -160,6 +163,7 @@ export default function Nav() {
           .nav-links { display: none; }
           .nav-hamburger { display: flex; }
           .nav-cortex { font-size: 13px; }
+          .nav-logo { height: 48px; }
           .nav-olympiad { display: none; }
           .nav-motto { display: none; }
         }
