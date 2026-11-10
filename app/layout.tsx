@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "Cortex Olympiad — India's Unified Olympiad Platform",
   description:
     "Discover 100+ olympiad exams for Class LKG to 12. Dates, eligibility, syllabus, registration — all in one honest, distraction-free platform.",
+    robots: { index: false, follow: false },
   keywords:
     "olympiad exams india, SOF IMO, science olympiad, mathematics olympiad, class 8 olympiad, HBCSE, Silverzone",
   openGraph: {
